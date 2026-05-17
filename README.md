@@ -1,2 +1,0 @@
-# LP
-Landing page
