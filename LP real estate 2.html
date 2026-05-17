@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Nieruchomości</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --gold: #C9A96E; --dark: #1A1A1A; --darker: #111111; }
+    body { font-family: 'DM Sans', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .hero-overlay { background: linear-gradient(135deg, rgba(17,17,17,0.85) 0%, rgba(17,17,17,0.4) 100%); }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    .anim { opacity:0; }
+    .anim.visible { animation: fadeUp 0.7s ease forwards; }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full min-h-screen text-white" style="background: rgb(17, 17, 17);"><!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"><span data-template-id="logo" class="canva-text font-display text-2xl font-bold tracking-wide cursor-pointer" onclick="navigate('')" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 16px;">NOVA</span>
+    <div class="hidden md:flex gap-8 text-sm tracking-wide"><a href="#oferta" class="hover:text-[#C9A96E] transition" onclick="navigate('')">Oferta</a> <a href="#o-nas" class="hover:text-[#C9A96E] transition" onclick="navigate('')">O nas</a> <a href="#kontakt" class="hover:text-[#C9A96E] transition" onclick="navigate('')">Kontakt</a>
+    </div>
+   </div>
+  </nav><!-- MAIN VIEW -->
+  <div id="main-view"><!-- Hero -->
+   <header class="relative w-full" style="min-height:calc(100 * min(var(--vh,1vh),1vh))"><img data-template-id="hero-img" loading="lazy" class="canva-image absolute inset-0 w-full h-full object-cover" src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920" alt="Nowoczesny luksusowy budynek mieszkalny ze szklanymi balkonami">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative z-10 flex flex-col justify-center items-start max-w-7xl mx-auto px-6 h-full" style="min-height:calc(100 * min(var(--vh,1vh),1vh))">
+     <h1 data-template-id="hero-title" class="canva-text font-display max-w-2xl leading-tight" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 52px;">Znajdź nieruchomość swoich marzeń</h1>
+     <p data-template-id="hero-subtitle" class="canva-text mt-4 max-w-lg text-white/70 text-lg" style="color: rgba(255, 255, 255, 0.7); font-weight: 400; font-style: normal; font-size: 16px;">Profesjonalne doradztwo, najlepsze lokalizacje i pełne wsparcie na każdym etapie transakcji.</p><a href="#oferta" data-template-id="hero-cta" class="canva-button mt-8 inline-block px-8 py-3 font-semibold tracking-wider text-sm uppercase transition hover:brightness-110" style="background: rgb(201, 169, 110); color: rgb(17, 17, 17); font-weight: 700; font-style: normal; font-size: 16px;">Zobacz ofertę</a>
+    </div>
+   </header>
+   <main><!-- Properties -->
+    <section id="oferta" class="w-full py-20 px-6" data-template-id="properties-section" style="background: rgb(17, 17, 17);">
+     <div class="max-w-7xl mx-auto">
+      <h2 data-template-id="properties-heading" class="canva-text font-display text-center mb-14" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 24px;">Wyróżnione nieruchomości</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+       <div data-template-id="card-1-wrap" class="canva-card rounded-xl overflow-hidden anim group cursor-pointer" onclick="navigate('property-1')" style="background: rgb(26, 26, 26);">
+        <div class="overflow-hidden">
+         <img data-template-id="card-1-img" loading="lazy" class="canva-image w-full h-56 object-cover group-hover:scale-105 transition duration-500" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Nowoczesny salon z neutralnymi tonami i elegancką kanapą">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="card-1-title" class="canva-text font-semibold text-lg" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Apartament Mokotów</h3>
+         <p data-template-id="card-1-details" class="canva-text text-sm mt-1 opacity-60" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">3 pokoje · 78 m² · 4 piętro</p>
+         <p data-template-id="card-1-price" class="canva-text mt-3 font-bold text-xl" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 16px;">1 250 000 zł</p>
+        </div>
+       </div>
+       <div data-template-id="card-2-wrap" class="canva-card rounded-xl overflow-hidden anim group cursor-pointer" style="animation-delay: 0.15s; background: rgb(26, 26, 26);" onclick="navigate('property-2')">
+        <div class="overflow-hidden">
+         <img data-template-id="card-2-img" loading="lazy" class="canva-image w-full h-56 object-cover group-hover:scale-105 transition duration-500" src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Przestronna nowoczesna kuchnia z białymi szafkami">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="card-2-title" class="canva-text font-semibold text-lg" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Loft Praga Północ</h3>
+         <p data-template-id="card-2-details" class="canva-text text-sm mt-1 opacity-60" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">2 pokoje · 55 m² · parter</p>
+         <p data-template-id="card-2-price" class="canva-text mt-3 font-bold text-xl" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 16px;">890 000 zł</p>
+        </div>
+       </div>
+       <div data-template-id="card-3-wrap" class="canva-card rounded-xl overflow-hidden anim group cursor-pointer" style="animation-delay: 0.3s; background: rgb(26, 26, 26);" onclick="navigate('property-3')">
+        <div class="overflow-hidden">
+         <img data-template-id="card-3-img" loading="lazy" class="canva-image w-full h-56 object-cover group-hover:scale-105 transition duration-500" src="https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Stylowy budynek mieszkalny ze szklanymi balkonami">
+        </div>
+        <div class="p-5">
+         <h3 data-template-id="card-3-title" class="canva-text font-semibold text-lg" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Penthouse Wola</h3>
+         <p data-template-id="card-3-details" class="canva-text text-sm mt-1 opacity-60" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">4 pokoje · 120 m² · 12 piętro</p>
+         <p data-template-id="card-3-price" class="canva-text mt-3 font-bold text-xl" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 16px;">2 480 000 zł</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Stats -->
+    <section data-template-id="stats-section" class="canva-section w-full py-16 px-6" style="background: rgb(13, 13, 13);">
+     <div class="max-w-5xl mx-auto grid grid-cols-3 gap-4 text-center">
+      <div>
+       <p data-template-id="stat-1-num" class="canva-text font-display font-bold" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 42px;">15+</p>
+       <p data-template-id="stat-1-label" class="canva-text text-sm uppercase tracking-widest opacity-60 mt-1" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Lat doświadczenia</p>
+      </div>
+      <div>
+       <p data-template-id="stat-2-num" class="canva-text font-display font-bold" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 42px;">800+</p>
+       <p data-template-id="stat-2-label" class="canva-text text-sm uppercase tracking-widest opacity-60 mt-1" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Sprzedanych nieruchomości</p>
+      </div>
+      <div>
+       <p data-template-id="stat-3-num" class="canva-text font-display font-bold" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 42px;">98%</p>
+       <p data-template-id="stat-3-label" class="canva-text text-sm uppercase tracking-widest opacity-60 mt-1" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Zadowolonych klientów</p>
+      </div>
+     </div>
+    </section><!-- About -->
+    <section id="o-nas" class="w-full py-20 px-6">
+     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="anim">
+       <img data-template-id="about-img" loading="lazy" class="canva-image w-full h-96 object-cover rounded-xl" src="https://images.pexels.com/photos/3760514/pexels-photo-3760514.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Profesjonalny doradca ds. nieruchomości przeglądający dokumenty">
+      </div>
+      <div class="anim" style="animation-delay:.2s">
+       <h2 data-template-id="about-heading" class="canva-text font-display mb-4" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 24px;">Zaufaj ekspertom rynku</h2>
+       <p data-template-id="about-text" class="canva-text leading-relaxed opacity-70" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Nova Nieruchomości to zespół doświadczonych specjalistów, którzy od ponad 15 lat pomagają klientom w znalezieniu idealnej przestrzeni do życia i inwestycji. Łączymy dogłębną wiedzę o rynku z indywidualnym podejściem do każdego klienta.</p>
+       <p data-template-id="about-text-2" class="canva-text mt-4 leading-relaxed opacity-70" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Działamy w Warszawie i okolicach, specjalizując się w segmencie premium. Oferujemy pełną obsługę — od wyceny, przez negocjacje, aż po finalizację transakcji.</p>
+      </div>
+     </div>
+    </section><!-- Contact -->
+    <section id="kontakt" data-template-id="contact-section" class="canva-section w-full py-20 px-6" style="background: rgb(26, 26, 26);">
+     <div class="max-w-xl mx-auto text-center">
+      <h2 data-template-id="contact-heading" class="canva-text font-display mb-8" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 24px;">Skontaktuj się z nami</h2>
+      <form id="contact-form" class="space-y-4 text-left">
+       <div>
+        <label data-template-id="label-name" for="c-name" class="canva-text text-sm font-medium block mb-1" style="color: rgba(255, 255, 255, 0.8); font-weight: 400; font-style: normal; font-size: 16px;">Imię i nazwisko</label><input id="c-name" type="text" required="" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-[#C9A96E] outline-none transition">
+       </div>
+       <div>
+        <label data-template-id="label-email" for="c-email" class="canva-text text-sm font-medium block mb-1" style="color: rgba(255, 255, 255, 0.8); font-weight: 400; font-style: normal; font-size: 16px;">E-mail</label><input id="c-email" type="email" required="" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-[#C9A96E] outline-none transition">
+       </div>
+       <div>
+        <label data-template-id="label-msg" for="c-msg" class="canva-text text-sm font-medium block mb-1" style="color: rgba(255, 255, 255, 0.8); font-weight: 400; font-style: normal; font-size: 16px;">Wiadomość</label><textarea id="c-msg" rows="4" required="" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-[#C9A96E] outline-none transition resize-none"></textarea>
+       </div><button data-template-id="contact-btn" type="submit" class="canva-button w-full py-3 rounded-lg font-semibold uppercase tracking-wider text-sm transition hover:brightness-110" style="background: rgb(201, 169, 110); color: rgb(17, 17, 17); font-weight: 700; font-style: normal; font-size: 16px;">Wyślij wiadomość</button>
+      </form>
+      <p id="form-success" class="hidden mt-6 text-[#C9A96E] font-medium">Dziękujemy! Skontaktujemy się wkrótce.</p>
+     </div>
+    </section>
+   </main>
+  </div><!-- PROPERTY 1 DETAIL -->
+  <div id="view-property-1" class="hidden">
+   <div class="pt-20 max-w-7xl mx-auto px-6 pb-20"><button onclick="navigate('')" class="flex items-center gap-2 text-[#C9A96E] hover:underline mb-8 mt-4"><i data-lucide="arrow-left" style="width:18px;height:18px"></i> <span data-template-id="p1-back-btn" class="canva-text text-sm font-semibold" style="color: rgb(201, 169, 110); font-weight: 600; font-style: normal; font-size: 16px;">Wróć do oferty</span></button> <!-- Hero image -->
+    <div class="rounded-xl overflow-hidden mb-10"><img data-template-id="p1-hero-img" loading="lazy" class="canva-image w-full h-[28rem] object-cover" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Nowoczesny salon z neutralnymi tonami i elegancką kanapą">
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+     <div class="md:col-span-2">
+      <h1 data-template-id="p1-title" class="canva-text font-display font-bold mb-2" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Apartament Mokotów</h1>
+      <p data-template-id="p1-meta" class="canva-text opacity-60 mb-1" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">3 pokoje · 78 m² · 4 piętro · ul. Puławska, Mokotów</p>
+      <p data-template-id="p1-price" class="canva-text font-bold text-2xl mb-6" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 28px;">1 250 000 zł</p>
+      <h2 data-template-id="p1-desc-heading" class="canva-text font-display font-semibold mb-3" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 24px;">Opis nieruchomości</h2>
+      <p data-template-id="p1-desc-1" class="canva-text leading-relaxed opacity-80 mb-3" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Elegancki 3-pokojowy apartament o powierzchni 78 m², zlokalizowany na 4. piętrze nowoczesnego budynku na Mokotowie. Przestronny salon z aneksem kuchennym, dwie sypialnie oraz łazienka z wanną. Mieszkanie wykończone w wysokim standardzie z użyciem naturalnych materiałów.</p>
+      <p data-template-id="p1-desc-2" class="canva-text leading-relaxed opacity-80" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Do mieszkania przynależy miejsce parkingowe w garażu podziemnym oraz komórka lokatorska. Budynek posiada monitoring, recepcję oraz wewnętrzny dziedziniec z zielenią. Doskonała lokalizacja z szybkim dojazdem do centrum — metro w odległości 5 min pieszo.</p>
+     </div>
+     <div>
+      <h3 data-template-id="p1-floorplan-heading" class="canva-text font-display font-semibold mb-3" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Rzut mieszkania</h3><img data-template-id="p1-floorplan-img" loading="lazy" class="canva-image w-full rounded-lg border border-white/10" src="https://images.pexels.com/photos/4458210/pexels-photo-4458210.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Rzut architektoniczny mieszkania z rozkładem pomieszczeń">
+     </div>
+    </div><!-- Gallery -->
+    <h3 data-template-id="p1-gallery-heading" class="canva-text font-display font-semibold mt-12 mb-6" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Galeria zdjęć</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4"><img data-template-id="p1-gallery-1" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Nowoczesna sypialnia z eleganckim oświetleniem"> <img data-template-id="p1-gallery-2" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Elegancka łazienka z nowoczesnymi kafelkami"> <img data-template-id="p1-gallery-3" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Stylowy budynek mieszkalny ze szklanymi balkonami">
+    </div>
+   </div>
+  </div><!-- PROPERTY 2 DETAIL -->
+  <div id="view-property-2" class="hidden">
+   <div class="pt-20 max-w-7xl mx-auto px-6 pb-20"><button onclick="navigate('')" class="flex items-center gap-2 text-[#C9A96E] hover:underline mb-8 mt-4"><i data-lucide="arrow-left" style="width:18px;height:18px"></i> <span data-template-id="p2-back-btn" class="canva-text text-sm font-semibold" style="color: rgb(201, 169, 110); font-weight: 600; font-style: normal; font-size: 16px;">Wróć do oferty</span></button>
+    <div class="rounded-xl overflow-hidden mb-10"><img data-template-id="p2-hero-img" loading="lazy" class="canva-image w-full h-[28rem] object-cover" src="https://images.pexels.com/photos/8089275/pexels-photo-8089275.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Przestronny loft z eleganckim wystrojem i industrialnym charakterem">
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+     <div class="md:col-span-2">
+      <h1 data-template-id="p2-title" class="canva-text font-display font-bold mb-2" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Loft Praga Północ</h1>
+      <p data-template-id="p2-meta" class="canva-text opacity-60 mb-1" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">2 pokoje · 55 m² · parter · ul. Ząbkowska, Praga Północ</p>
+      <p data-template-id="p2-price" class="canva-text font-bold text-2xl mb-6" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 28px;">890 000 zł</p>
+      <h2 data-template-id="p2-desc-heading" class="canva-text font-display font-semibold mb-3" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 24px;">Opis nieruchomości</h2>
+      <p data-template-id="p2-desc-1" class="canva-text leading-relaxed opacity-80 mb-3" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Klimatyczny loft w zabytkowej kamienicy na Pradze Północ, po gruntownym remoncie z zachowaniem industrialnego charakteru. Otwarta przestrzeń dzienna z wysokimi sufitami (3,5 m), ceglane ściany i duże okna zapewniające doskonałe doświetlenie.</p>
+      <p data-template-id="p2-desc-2" class="canva-text leading-relaxed opacity-80" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Mieszkanie na parterze z bezpośrednim wyjściem do prywatnego patio. Idealne dla osób ceniących unikalny design i kreatywną atmosferę dzielnicy. W pobliżu liczne galerie, kawiarnie i tereny rekreacyjne nad Wisłą.</p>
+     </div>
+     <div>
+      <h3 data-template-id="p2-floorplan-heading" class="canva-text font-display font-semibold mb-3" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Rzut mieszkania</h3><img data-template-id="p2-floorplan-img" loading="lazy" class="canva-image w-full rounded-lg border border-white/10" src="https://images.pexels.com/photos/271667/pexels-photo-271667.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Rzut architektoniczny z detalami rozkładu pomieszczeń">
+     </div>
+    </div>
+    <h3 data-template-id="p2-gallery-heading" class="canva-text font-display font-semibold mt-12 mb-6" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Galeria zdjęć</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4"><img data-template-id="p2-gallery-1" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Nowoczesna kuchnia z drewnianymi akcentami"> <img data-template-id="p2-gallery-2" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Przestronna sypialnia w stylu loftowym"> <img data-template-id="p2-gallery-3" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/8143708/pexels-photo-8143708.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Kompaktowa łazienka z nowoczesnymi wykończeniami">
+    </div>
+   </div>
+  </div><!-- PROPERTY 3 DETAIL -->
+  <div id="view-property-3" class="hidden">
+   <div class="pt-20 max-w-7xl mx-auto px-6 pb-20"><button onclick="navigate('')" class="flex items-center gap-2 text-[#C9A96E] hover:underline mb-8 mt-4"><i data-lucide="arrow-left" style="width:18px;height:18px"></i> <span data-template-id="p3-back-btn" class="canva-text text-sm font-semibold" style="color: rgb(201, 169, 110); font-weight: 600; font-style: normal; font-size: 16px;">Wróć do oferty</span></button>
+    <div class="rounded-xl overflow-hidden mb-10"><img data-template-id="p3-hero-img" loading="lazy" class="canva-image w-full h-[28rem] object-cover" src="https://images.pexels.com/photos/7045915/pexels-photo-7045915.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Przestronny salon z panoramicznymi oknami i widokiem na miasto">
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+     <div class="md:col-span-2">
+      <h1 data-template-id="p3-title" class="canva-text font-display font-bold mb-2" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Penthouse Wola</h1>
+      <p data-template-id="p3-meta" class="canva-text opacity-60 mb-1" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">4 pokoje · 120 m² · 12 piętro · ul. Kasprzaka, Wola</p>
+      <p data-template-id="p3-price" class="canva-text font-bold text-2xl mb-6" style="color: rgb(201, 169, 110); font-weight: 700; font-style: normal; font-size: 28px;">2 480 000 zł</p>
+      <h2 data-template-id="p3-desc-heading" class="canva-text font-display font-semibold mb-3" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 24px;">Opis nieruchomości</h2>
+      <p data-template-id="p3-desc-1" class="canva-text leading-relaxed opacity-80 mb-3" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Luksusowy penthouse na 12. piętrze z panoramicznym widokiem na Warszawę. Cztery pokoje, w tym master bedroom z garderobą i prywatną łazienką. Salon o powierzchni 45 m² z wyjściem na przestronny taras o powierzchni 30 m².</p>
+      <p data-template-id="p3-desc-2" class="canva-text leading-relaxed opacity-80" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Wykończenie w standardzie deweloperskim premium — podłogi z dębu europejskiego, system smart home, klimatyzacja we wszystkich pomieszczeniach. Budynek z concierge, siłownią i strefą SPA dla mieszkańców. Dwa miejsca parkingowe w cenie.</p>
+     </div>
+     <div>
+      <h3 data-template-id="p3-floorplan-heading" class="canva-text font-display font-semibold mb-3" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Rzut mieszkania</h3><img data-template-id="p3-floorplan-img" loading="lazy" class="canva-image w-full rounded-lg border border-white/10" src="https://images.pexels.com/photos/4458205/pexels-photo-4458205.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Rzut architektoniczny penthouse'u z rozkładem pomieszczeń">
+     </div>
+    </div>
+    <h3 data-template-id="p3-gallery-heading" class="canva-text font-display font-semibold mt-12 mb-6" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Galeria zdjęć</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4"><img data-template-id="p3-gallery-1" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Elegancki salon z nowoczesnym umeblowaniem"> <img data-template-id="p3-gallery-2" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Luksusowa sypialnia z rustykalnym żyrandolem"> <img data-template-id="p3-gallery-3" loading="lazy" class="canva-image w-full h-56 object-cover rounded-lg" src="https://images.pexels.com/photos/27903662/pexels-photo-27903662.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Taras na dachu z widokiem na panoramę miasta o zmierzchu">
+    </div>
+   </div>
+  </div><!-- Footer -->
+  <footer data-template-id="footer-section" class="canva-footer w-full py-8 px-6 border-t border-white/10" style="background: rgb(13, 13, 13);">
+   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <p data-template-id="footer-text" class="canva-text text-sm opacity-50" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">© 2026 Nova Nieruchomości. Wszelkie prawa zastrzeżone.</p>
+    <div class="flex gap-4"><a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:20px;height:20px;color:#C9A96E"></i></a> <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:20px;height:20px;color:#C9A96E"></i></a> <a href="#" aria-label="Linkedin"><i data-lucide="linkedin" style="width:20px;height:20px;color:#C9A96E"></i></a>
+    </div>
+   </div>
+  </footer>
+  <script src="/_sdk/editing_sdk.js"></script>
+  <script>
+    lucide.createIcons();
+
+    const views = ['main-view', 'view-property-1', 'view-property-2', 'view-property-3'];
+
+    function navigate(route) {
+      window.location.hash = route;
+    }
+
+    function showView() {
+      const hash = window.location.hash.replace('#', '');
+      const viewMap = {
+        'property-1': 'view-property-1',
+        'property-2': 'view-property-2',
+        'property-3': 'view-property-3'
+      };
+      const activeView = viewMap[hash] || 'main-view';
+      views.forEach(id => {
+        document.getElementById(id).classList.toggle('hidden', id !== activeView);
+      });
+      window.scrollTo(0, 0);
+    }
+
+    window.addEventListener('hashchange', showView);
+    showView();
+
+    // Scroll animations
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.anim').forEach(el => obs.observe(el));
+
+    // Contact form
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.target.classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9fd20618c04a34b2',t:'MTc3OTAxNDYzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
